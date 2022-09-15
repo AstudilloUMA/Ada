@@ -1,1 +1,1 @@
-Repositorio para almacenamiento de codigos de la asignatura #Analisis y disenyo de algoritmos
+Repositorio para almacenamiento de codigos de la asignatura Analisis y Diseño de Algoritmos
