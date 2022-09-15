@@ -14,7 +14,7 @@ public class Main {
 			System.out.println("Introduzca el valor a buscar: ");
 			val = sc.nextInt();
 			
-			Busqueda bus = new Busqueda(val, array);
+			Busqueda bus = new Busqueda(val,array);
 			
 			if(bus.esta(val, 0)) System.out.println(val + " si se encuentra en el array");
 			else System.out.println(val + " no se encuentra en el array");
