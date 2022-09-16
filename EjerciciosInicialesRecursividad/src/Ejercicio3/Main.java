@@ -4,16 +4,6 @@ import java.util.Scanner;
 
 public class Main {
 	
-	public static int esta(int val, int j, int[] array) {
-		int est = 0;
-			
-		if(val == array[j]) est = 1;
-		else {
-			if(j < array.length-1) est = esta(val, j+1, array);		
-		}
-		return est; 
-	}
-
 	public static void main(String[] args) {
 		
 		try (Scanner sc = new Scanner(System.in)) {
@@ -23,8 +13,10 @@ public class Main {
 			System.out.println("Introduzca el valor a buscar: ");
 			val = sc.nextInt();
 			
-			if(esta(val, 0,array) == 1) System.out.println(val + " si se encuentra en el array");
-			else System.out.println(val + " no se encuentra en el array");
+			Busqueda busqueda = new Busqueda(val,array);
+			
+			if(busqueda.esta(val, 0,array) == 1) System.out.println("El valor " + val + " si se encuentra en el array");
+			else System.out.println("El valor " + val + " no se encuentra en el array");
 		}
 	}
 
