@@ -10,7 +10,7 @@ public class Analizador {
         for(int i=0; i<10; i++){
             double sum_auxTiempo = 0;
             double sum_auxTiempo2 = 0;
-            for(int j=0; j<10; j++){ // j se le pasa como n al algoritmo, se inicializa a 1 pq no tiene sentido pasarle 0 al algoritmo
+            for(int j=0; j<10; j++){ 
 
                 temporizador.iniciar();
                 Algoritmo.f(20*(i+1));
@@ -67,7 +67,7 @@ public class Analizador {
             } else if (array[i] > 1.4 && array[i] < 1.6) { 
             	
                 rep[2]++; // N
-             if(rep[2] >= max) max = rep[2];
+                if(rep[2] >= max) max = rep[2];
                 
             } else if (array[i] >= 1.6 && array[i] <= 1.9) {
             	
@@ -82,7 +82,7 @@ public class Analizador {
             } else if (array[i] > 3.0 && array[i] <= 6.0) {
             	
                 rep[4]++; // N2
-               if(rep[4] >= max) max = rep[4];
+                if(rep[4] >= max) max = rep[4];
                 
             } else if (array[i] > 6.0 && array[i] <= 800.0) {
             	
@@ -92,21 +92,22 @@ public class Analizador {
             }else if (array[i]>800.0 && array[i] <= 500000 ) {
             	
                 rep[6]++; // 2N
-              if(rep[6] >= max) max = rep[6];
+                if(rep[6] >= max) max = rep[6];
                 
             }
             else{
             	
                 rep[7]++; // NF
-               if(rep[7] >= max) max = rep[7];
+                if(rep[7] >= max) max = rep[7];
                 
             }
     		//System.out.println(array[i]);
     	}
     	
-    /*	for(int i = 0; i < rep.length; i++) {
+    	/*for(int i = 0; i < rep.length; i++) {
     		if(rep[i] >= max) max = rep[i];
-    		// System.out.println(rep[i]);	*/
+    		// System.out.println(rep[i]);	
+    	}*/
   	
     	if (max == rep[0]) {
             return "1";
