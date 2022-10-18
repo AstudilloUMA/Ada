@@ -10,7 +10,7 @@ public class Analizador {
         for(int i=0; i<10; i++){															// --2
             double sum_auxTiempo = 0;														// --1
             double sum_auxTiempo2 = 0;														// --1 
-            for(int j=0; j<10; j++){ 														// --4 
+            for(int j=0; j<10; j++){ 														// --2 
 
                 temporizador.iniciar();
                 Algoritmo.f(20*(i+1));														// Bloque A1
@@ -35,15 +35,12 @@ public class Analizador {
 
             // System.out.println(auxRatio[i]);
         }
-        //System.out.println(auxTiempo.length);
-        //System.out.println(auxTiempo2.length);
-        //System.out.println(auxRatio.length);
         /*double sum_aux_ratio = 0;
         for (int i=0; i<auxRatio.length;i++){
             sum_aux_ratio += auxRatio[i];
         }*/
 
-        System.out.println(complejidad(auxRatio));
+        System.out.println(complejidad(auxRatio));											// Bloque complejidad
         //System.out.println("NLOGN");
     }
 
