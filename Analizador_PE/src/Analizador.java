@@ -1,37 +1,37 @@
 /** Practica 1 PABLO ASTUDILLO FRAGA **/
 public class Analizador {
     public static void main (String[] args){
-        Temporizador temporizador = new Temporizador();
+        Temporizador temporizador = new Temporizador();										// --1 
         // double auxTiempo[] = new double[20]; // valores de 2n
         // double auxTiempo2[] = new double[20]; // valores de n
-        double auxRatio[] = new double[10];
+        double auxRatio[] = new double[10];													// --1
 
         /** Dos temporizadores uno para 2n y otro para n**/
-        for(int i=0; i<10; i++){
-            double sum_auxTiempo = 0;
-            double sum_auxTiempo2 = 0;
-            for(int j=0; j<10; j++){ 
+        for(int i=0; i<10; i++){															// --2
+            double sum_auxTiempo = 0;														// --1
+            double sum_auxTiempo2 = 0;														// --1 
+            for(int j=0; j<10; j++){ 														// --4 
 
                 temporizador.iniciar();
-                Algoritmo.f(20*(i+1));
+                Algoritmo.f(20*(i+1));														// Bloque A1
                 temporizador.parar();
                 // auxTiempo[j] = temporizador.tiempoPasado();
-                sum_auxTiempo += temporizador.tiempoPasado();
+                sum_auxTiempo += temporizador.tiempoPasado();								// --2 
                 //System.out.println(temporizador.tiempoPasado());
                 temporizador.reiniciar();
 
                 //System.out.println("----------------------");
 
                 temporizador.iniciar();
-                Algoritmo.f(10*(i+1));
+                Algoritmo.f(10*(i+1));														// Bloque A2
                 temporizador.parar();
                 // auxTiempo2[j] = temporizador.tiempoPasado();
-                sum_auxTiempo2 += temporizador.tiempoPasado();
+                sum_auxTiempo2 += temporizador.tiempoPasado();								// --2	
                 //System.out.println(temporizador.tiempoPasado());
                 temporizador.reiniciar();
             }
 
-            auxRatio[i] = (sum_auxTiempo/10)/(sum_auxTiempo2/10);
+            auxRatio[i] = (sum_auxTiempo/10)/(sum_auxTiempo2/10);							// -- 5
 
             // System.out.println(auxRatio[i]);
         }
