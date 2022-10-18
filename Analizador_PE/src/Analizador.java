@@ -13,7 +13,7 @@ public class Analizador {
             for(int j=0; j<10; j++){ // j se le pasa como n al algoritmo, se inicializa a 1 pq no tiene sentido pasarle 0 al algoritmo
 
                 temporizador.iniciar();
-                Algoritmo.f(20);
+                Algoritmo.f(20*(i+1));
                 temporizador.parar();
                 // auxTiempo[j] = temporizador.tiempoPasado();
                 sum_auxTiempo += temporizador.tiempoPasado();
@@ -23,7 +23,7 @@ public class Analizador {
                 //System.out.println("----------------------");
 
                 temporizador.iniciar();
-                Algoritmo.f(10);
+                Algoritmo.f(10*(i+1));
                 temporizador.parar();
                 // auxTiempo2[j] = temporizador.tiempoPasado();
                 sum_auxTiempo2 += temporizador.tiempoPasado();
