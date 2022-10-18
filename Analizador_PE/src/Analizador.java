@@ -13,7 +13,7 @@ public class Analizador {
             for(int j=0; j<10; j++){ // j se le pasa como n al algoritmo, se inicializa a 1 pq no tiene sentido pasarle 0 al algoritmo
 
                 temporizador.iniciar();
-                Algoritmo.f(200);
+                Algoritmo.f(20);
                 temporizador.parar();
                 // auxTiempo[j] = temporizador.tiempoPasado();
                 sum_auxTiempo += temporizador.tiempoPasado();
@@ -23,7 +23,7 @@ public class Analizador {
                 //System.out.println("----------------------");
 
                 temporizador.iniciar();
-                Algoritmo.f(100);
+                Algoritmo.f(10);
                 temporizador.parar();
                 // auxTiempo2[j] = temporizador.tiempoPasado();
                 sum_auxTiempo2 += temporizador.tiempoPasado();
@@ -53,34 +53,61 @@ public class Analizador {
     	int max = 0;
     	
     	for(int i = 0; i < array.length; i++) {
+    		
     		if (array[i] < 1.0005) {
+    			
     			rep[0] ++; // 1
+    			if(rep[0] >= max) max = rep[0];
+    			
             } else if (array[i] > 1.0005 && array[i] <= 1.4) {
+            	
                 rep[1]++; // LOGN
+               if(rep[1] >= max) max = rep[1];
+                
             } else if (array[i] > 1.4 && array[i] < 1.6) { 
+            	
                 rep[2]++; // N
+             if(rep[2] >= max) max = rep[2];
+                
             } else if (array[i] >= 1.6 && array[i] <= 1.9) {
+            	
                 rep[3]++; // NLOGN
+                if(rep[3] >= max) max = rep[3];
+                
             } else if (array[i] >= 1.9 && array[i] <= 3.0) {
+            	
             	rep[2]++; // N
+            	if(rep[2] >= max) max = rep[2];
+            	
             } else if (array[i] > 3.0 && array[i] <= 6.0) {
+            	
                 rep[4]++; // N2
+               if(rep[4] >= max) max = rep[4];
+                
             } else if (array[i] > 6.0 && array[i] <= 800.0) {
+            	
                 rep[5]++; // N3
+                if(rep[5] >= max) max = rep[5];
+                
             }else if (array[i]>800.0 && array[i] <= 500000 ) {
+            	
                 rep[6]++; // 2N
+              if(rep[6] >= max) max = rep[6];
+                
             }
             else{
+            	
                 rep[7]++; // NF
+               if(rep[7] >= max) max = rep[7];
+                
             }
     		//System.out.println(array[i]);
     	}
     	
-    	for(int i = 0; i < rep.length; i++) {
+    /*	for(int i = 0; i < rep.length; i++) {
     		if(rep[i] >= max) max = rep[i];
-    		// System.out.println(rep[i]);
-    	}
-    	
+    		// System.out.println(rep[i]);	*/
+  	
     	if (max == rep[0]) {
             return "1";
         } else if (max == rep[1]) {
