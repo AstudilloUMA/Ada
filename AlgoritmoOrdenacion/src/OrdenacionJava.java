@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.*;
+
 ////////////////////////////////////////////////////////////////////////////////////////////
 // ALUMNO:
 // GRUPO:
@@ -7,7 +11,9 @@ public class OrdenacionJava extends Ordenacion {
     
 	
    public static <T extends Comparable<? super T>> void ordenar(T v[]) {
-        // A implementar por el alumno
+        List<T> lista = new ArrayList<>(Arrays.asList(v)); 
+        Collections.sort(lista);
+        lista.toArray(v);
    }
 
 
