@@ -5,14 +5,14 @@
 
 import java.util.Scanner;
 
-public final class BuscaElem extends OrdenacionRapida{
+public final class BuscaElem {
 	
 	public static <T extends Comparable<? super T>> T kesimo(T v[], int k) {
 		return kesimoRec(v,0,v.length-1,k);
 	}
 
 	public static <T extends Comparable<? super T>> T kesimoRec(T v[], int izq, int der, int k) {
-		int ref = partir (v, v[izq], izq, der);
+		int ref = OrdenacionRapida.partir(v, v[izq], izq, der);
 		
 		if (ref == k) return v[ref];
 		else if (ref < k) return kesimoRec(v, ref+1, der, k);
