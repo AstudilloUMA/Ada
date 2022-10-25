@@ -20,7 +20,7 @@ public class OrdenacionRapida extends Ordenacion {
 	}
 	   
    public static <T extends Comparable<? super T>> int partir(T v[], T pivote, int izq, int der) {
-	    int i = izq + 1;
+	    int i = izq + 1;										
 	    int j = der;
 	    
 	    do {
