@@ -1,0 +1,6 @@
+1.- Decisiones:
+    - Decido para cada asignatura cuantas horas le dedico
+    - Solucion lista de n elementos S={s1,s2,s3,...,sn}
+        donde si pertenece a N, 0 <= si <= H
+    - Vamos a construir la lista de izq(paso 1) a der(paso n)
+    - Opciones: desde 0 al numero de horas que me queden
