@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 /**
  * 
- * @author ***** Jose A. Onieva *******
+ * @author ***** Pablo Astudillo Fraga *******
  *
  */
 public class MochilaPD extends Mochila {
@@ -66,6 +66,4 @@ public class MochilaPD extends Mochila {
 			}
 		}
 	}
-	
-
 }

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 /**
  * 
- * @author ***** Jose A. Onieva ******* Asumimos que: a) Todos los items tienen
+ * @author ***** Pablo Astudillo Fraga ******* Asumimos que: a) Todos los items tienen
  *         un valor >=1 b) W>0
  */
 
