@@ -24,13 +24,13 @@ public class MochilaAV extends Mochila {
 		int pesoSobrante = pm.pesoMaximo;
 		int sumaTotal = 0;
 
-		int[] cantidades = new int[items.size()];
+		int[] resultado = new int[items.size()];
 
 		int i = 0;
 		while(i < items.size() && pesoSobrante > 0) {
 			Item it = items.get(i);
-			while (cantidades[it.index] < it.unidades && it.peso <= pesoSobrante) {
-				cantidades[it.index]++;
+			while (resultado[it.index] < it.unidades && it.peso <= pesoSobrante) {
+				resultado[it.index]++;
 
 				pesoSobrante -= it.peso;
 				sumaTotal += it.valor;
@@ -38,6 +38,6 @@ public class MochilaAV extends Mochila {
 			i++;
 		}
 
-		return new SolucionMochila(cantidades, pm.pesoMaximo - pesoSobrante, sumaTotal);
+		return new SolucionMochila(resultado, pm.pesoMaximo - pesoSobrante, sumaTotal);
 	}
 }
