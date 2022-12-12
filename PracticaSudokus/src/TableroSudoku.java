@@ -135,7 +135,7 @@ public class TableroSudoku implements Cloneable {
 
 	// Devuelve true si se puede colocar el @valor en la @fila y @columna dadas.
 	protected boolean sePuedePonerEn(int fila, int columna, int valor) {
-		return !estaEnColumna(columna,valor) || !estaEnFila(fila, valor) || !estaEnSubtablero(fila, columna, valor);
+		return !estaEnColumna(columna,valor) && !estaEnFila(fila, valor) && !estaEnSubtablero(fila, columna, valor);
 	}
 
 	protected void resolverTodos(List<TableroSudoku> soluciones, int fila, int columna) {
