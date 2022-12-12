@@ -169,7 +169,7 @@ public class TableroSudoku implements Cloneable {
 	
 	public static void main(String arg[]) {
 		TableroSudoku t = new TableroSudoku( 
-			    ".4....36263.941...5.7.3.....9.3751..3.48.....17..62...716.9..2...96.......312..9.");
+			    "..7..39.2...8.....943.....769.......3..527.........84.....48...26.............129");
 		List<TableroSudoku> lt = t.resolverTodos();
 		System.out.println(t);
 		System.out.println(lt.size());
@@ -178,8 +178,5 @@ public class TableroSudoku implements Cloneable {
 			System.out.println(ts);
 			
 		}
-
 	}
-	
-	
 }
